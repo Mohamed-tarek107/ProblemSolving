@@ -24,6 +24,7 @@ public:
         return (head == NULL);
     }
 
+    
     // create:
     // 1- Create new node
     // 2- fill data
