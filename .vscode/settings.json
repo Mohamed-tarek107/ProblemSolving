@@ -2,6 +2,7 @@
     "C_Cpp.default.compilerPath": "D:/Complier/mingw64/bin/g++.exe",
     "files.associations": {
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cstdlib": "cpp"
     }
 }
