@@ -150,6 +150,22 @@ class Linkedlist {
         this.head = null;
         this.length = 0;
     }
+
+    reverse(){
+      let temp = this.head;
+      let prev = null;
+      let next = null;
+
+      this.head = this.tail;
+      this.tail = temp;
+
+      while(temp){
+          next = temp.next;
+          temp.next = prev;
+          prev = temp;
+          temp = next;
+      }
+    }
 }
 
 // const mylinkedlist = new Linkedlist(1)
