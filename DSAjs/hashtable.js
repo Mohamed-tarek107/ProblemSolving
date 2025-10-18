@@ -16,5 +16,26 @@ class Hashtable {
 
         return sum;
     }
+    set(key,value){
+        const index = this._hashFunction(key)
 
+        if(!this.keymap[index]) this.keymap[index] = []
+
+        this.keymap[index].push([key,value]);
+        return this;
+    }
+
+    get(key){
+        const index = this._hashFunction(key)
+        
+        if(this.keymap[index]){
+            for(let i = 0; i < this.keymap[index].length; i++){
+                if(this.keymap[index][i][0] == key){
+                    return this.keymap[index][i][1]
+                }
+            }
+        }
+
+        return undefined;
+    }
 }
