@@ -38,4 +38,56 @@ class Hashtable {
 
         return undefined;
     }
+
+    getallkeys(){
+        const keys = []
+
+        for(let i = 0; i < this.keymap.length; i++){
+            if(this.keymap[i]){
+                for(let j = 0; j < this.keymap[i].length; J++){
+                    keys.push(this.keymap[i][j][0])
+                }
+            }
+        }
+
+        return keys;
+    }
+
+
+    getallvalues(){
+        const values = [];
+
+
+        for(let i = 0; i < this.keymap.length; i++){
+            if(this.keymap[i]){
+                for(let j = 0; j < this.keymap[i].length; J++){
+                    values.push(this.keymap[i][j][1])
+                }
+            }
+        }
+        return values;
+    }
+}
+
+//leetcode
+
+function wordcounter(text){
+    
+    const lowertext = text.toLowerCase();
+    
+
+    const wordMap = {}
+
+    const words = lowertext.split(' ')
+
+
+    for(const word of words){
+        if(word in wordMap){
+            wordMap[word]++;
+        }else{
+            wordMap[word] = 1;
+        }
+    }
+
+    return wordMap;
 }
